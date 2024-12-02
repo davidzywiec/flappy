@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name pipes
+
 const SPEED = 120;
 @onready var oscn : VisibleOnScreenNotifier2D = $OnScreenNotify
 
