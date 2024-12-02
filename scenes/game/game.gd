@@ -23,7 +23,7 @@ func spawn_pipes() -> void:
 	var pos_x = spawnU.global_position.x
 	var pos_y = rng.randf_range(spawnU.global_position.y,spawnL.global_position.y)
 	var pscene : pipes = pipes.instantiate()
-	pscene.global_position = Vector2(pos_x,pos_y)
 	pipeHolder.add_child(pscene)
-	
+	pscene.global_position = Vector2(pos_x,pos_y)
+
 	
