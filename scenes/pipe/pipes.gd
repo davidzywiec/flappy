@@ -11,4 +11,4 @@ func _physics_process(delta: float) -> void:
 	position.x -= SPEED * delta;
 
 func exit_screen():
-  	queue_free()
+	queue_free()
