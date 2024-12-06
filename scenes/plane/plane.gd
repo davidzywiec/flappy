@@ -6,6 +6,8 @@ const POWER = -300.0
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var anim_sprite : AnimatedSprite2D = $AnimatedSprite2D
 
+signal on_plane_die
+
 func _physics_process(delta: float) -> void:
 
 	velocity.y += GRAVITY * delta
@@ -24,6 +26,8 @@ func fly() -> void:
 
 
 func die() -> void:
-	print("Game Over!")
 	anim_sprite.stop()
 	set_physics_process(false)
+	on_plane_die.emit()
+
+	
