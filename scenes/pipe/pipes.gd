@@ -14,9 +14,6 @@ func _process(delta: float) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if GameManager.game_over:
-		pass
-	else:
 		position.x -= GameManager.SCROLL_SPEED * delta;
 
 func exit_screen():
