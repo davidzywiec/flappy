@@ -30,4 +30,4 @@ func spawn_pipes() -> void:
 
 func on_plane_die() -> void:
 	spawnTimer.stop()
-	propagate_call("set_physics_process",[false],true)
+	#propagate_call("set_physics_process",[false],true)

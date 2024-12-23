@@ -8,6 +8,9 @@ const POWER = -300.0
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var anim_sprite : AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	SignalManager.on_plane_die.connect(die)
+
 func _physics_process(delta: float) -> void:
 
 	velocity.y += GRAVITY * delta
@@ -16,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if is_on_floor():
-		die()
+		SignalManager.on_plane_die.emit()
 
 
 func fly() -> void:
@@ -28,6 +31,5 @@ func fly() -> void:
 func die() -> void:
 	anim_sprite.stop()
 	set_physics_process(false)
-	SignalManager.on_plane_die.emit()
 
 	
