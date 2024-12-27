@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf6w73ynciyvs"]
+[gd_scene load_steps=6 format=3 uid="uid://bf6w73ynciyvs"]
 
 [ext_resource type="Texture2D" uid="uid://07iu36d2lkb8" path="res://assets/background/rocks_2.png" id="1_pf2my"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_t06kl"]
 [ext_resource type="PackedScene" uid="uid://b3y48hgcmrkwc" path="res://scenes/plane/plane.tscn" id="2_fiipk"]
 [ext_resource type="PackedScene" uid="uid://7otoxkxa78bk" path="res://scenes/branch/barrier.tscn" id="3_ti3ql"]
+[ext_resource type="PackedScene" uid="uid://dpyl2w4w8bfur" path="res://scenes/menu/game_over_ui.tscn" id="5_nyelj"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_t06kl")
@@ -35,17 +36,6 @@ autostart = true
 [node name="PipeHolder" type="Node" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverUI" parent="CanvasLayer" instance=ExtResource("5_nyelj")]
 visible = false
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Game Over"
