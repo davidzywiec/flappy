@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf6w73ynciyvs"]
+[gd_scene load_steps=7 format=3 uid="uid://bf6w73ynciyvs"]
 
 [ext_resource type="Texture2D" uid="uid://07iu36d2lkb8" path="res://assets/background/rocks_2.png" id="1_pf2my"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_t06kl"]
 [ext_resource type="PackedScene" uid="uid://b3y48hgcmrkwc" path="res://scenes/plane/plane.tscn" id="2_fiipk"]
 [ext_resource type="PackedScene" uid="uid://7otoxkxa78bk" path="res://scenes/branch/barrier.tscn" id="3_ti3ql"]
 [ext_resource type="PackedScene" uid="uid://dpyl2w4w8bfur" path="res://scenes/menu/game_over_ui.tscn" id="5_nyelj"]
+[ext_resource type="PackedScene" uid="uid://dn6iwol0xedrs" path="res://scenes/game/game_ui.tscn" id="6_cdjem"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_t06kl")
@@ -39,3 +40,5 @@ autostart = true
 
 [node name="GameOverUI" parent="CanvasLayer" instance=ExtResource("5_nyelj")]
 visible = false
+
+[node name="gameUI" parent="CanvasLayer" instance=ExtResource("6_cdjem")]

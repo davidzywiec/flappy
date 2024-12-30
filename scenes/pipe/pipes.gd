@@ -36,6 +36,9 @@ func on_plane_die():
 func on_collision(body: Node2D):
 	if body is Tappy:
 		SignalManager.on_plane_die.emit()
-
+	
 func score(body: Node2D):
-	score_sound.play()
+	if body is Tappy:
+		score_sound.play()
+		SignalManager.score.emit()
+		
