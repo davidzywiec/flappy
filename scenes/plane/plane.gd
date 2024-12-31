@@ -7,6 +7,7 @@ const POWER = -300.0
 
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var anim_sprite : AnimatedSprite2D = $AnimatedSprite2D
+@onready var engine_noise : AudioStreamPlayer2D = $EngineNoise
 
 func _ready() -> void:
 	SignalManager.on_plane_die.connect(die)
@@ -30,6 +31,7 @@ func fly() -> void:
 
 func die() -> void:
 	anim_sprite.stop()
+	engine_noise.stop()
 	set_physics_process(false)
 
 	

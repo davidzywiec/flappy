@@ -19,7 +19,8 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	if position.x <= OFF_SCREEN_X:
+	if self.global_position.x + 25 <= get_viewport_rect().position.x:
+		print("Exit")
 		exit_screen()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

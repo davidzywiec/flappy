@@ -1,0 +1,39 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc3a1uw2mh3qv"]
+
+[ext_resource type="PackedScene" uid="uid://cuddj6sas4iu5" path="res://parallax_layer.tscn" id="1_1uu4l"]
+[ext_resource type="Texture2D" uid="uid://brc8xn432ky3x" path="res://assets/background/sky.png" id="1_d7kg2"]
+[ext_resource type="Script" path="res://scenes/background/parallax_background.gd" id="1_deehe"]
+[ext_resource type="Texture2D" uid="uid://dktkxnpic2yf8" path="res://assets/background/clouds_1.png" id="2_fm7ue"]
+[ext_resource type="Texture2D" uid="uid://uwl30nx05k6c" path="res://assets/background/rocks_1.png" id="3_1i415"]
+[ext_resource type="Texture2D" uid="uid://bbok3s4iaoam1" path="res://assets/background/clouds_2.png" id="4_vx56b"]
+[ext_resource type="Texture2D" uid="uid://07iu36d2lkb8" path="res://assets/background/rocks_2.png" id="5_kgumw"]
+[ext_resource type="Texture2D" uid="uid://dj7omcjtapqu2" path="res://assets/background/clouds_3.png" id="6_3xw76"]
+[ext_resource type="Texture2D" uid="uid://bieqfkk0ldhdw" path="res://assets/background/clouds_4.png" id="7_0pf6j"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_deehe")
+
+[node name="Sky" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("1_d7kg2")
+
+[node name="CloudsLayer1" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("2_fm7ue")
+scroll_scale = 0.3
+
+[node name="RocksLayer1" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("3_1i415")
+scroll_scale = 0.5
+
+[node name="CloudsLayer2" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("4_vx56b")
+
+[node name="RocksLayer2" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("5_kgumw")
+scroll_scale = 0.75
+
+[node name="CloudsLayer3" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("6_3xw76")
+
+[node name="CloudsLayer4" parent="." instance=ExtResource("1_1uu4l")]
+texture = ExtResource("7_0pf6j")

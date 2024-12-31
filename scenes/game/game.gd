@@ -6,6 +6,7 @@ const pipes = preload("res://scenes/pipe/pipes.tscn")
 @onready var spawnL : Marker2D = $spawnL
 @onready var spawnTimer : Timer = $spawnTimer
 @onready var pipeHolder : Node = $PipeHolder
+@onready var pBackground : ParallaxBackground = $ParallaxBackground
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,6 +18,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+
+func _physics_process(delta: float) -> void:
 	pass
 
 #Spawn a pipes scene between two points
